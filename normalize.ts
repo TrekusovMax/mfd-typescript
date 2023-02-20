@@ -3,9 +3,7 @@ interface Posts {
   title: string
   body: string
 }
-type ByID = {
-  [key: string]: Posts
-}
+type ByID = Record<string, Posts>
 
 interface NormalizedPost {
   byId: ByID
