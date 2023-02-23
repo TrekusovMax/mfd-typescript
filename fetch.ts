@@ -14,6 +14,6 @@ const getData = (url: string): Promise<Comments[]> => {
 
 getData(COMMENTS_URL).then((comment) =>
   comment.forEach((c) =>
-    console.log('ID:', c.id.toString(), 'Email:', c.email),
+    console.log('"ID:' + c.id.toString() + 'Email:', c.email + '"'),
   ),
 )
