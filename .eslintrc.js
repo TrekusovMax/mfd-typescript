@@ -2,21 +2,22 @@ module.exports = {
   env: {
     browser: true,
     es2021: true,
+    amd: true,
+    node: true,
   },
-  extends: [
-    'airbnb-base',
-    'airbnb-typescript',
-    'plugin:@typescript-eslint/recommended',
-    'plugin:@typescript-eslint/recommended-requiring-type-checking',
-  ],
+  extends: ['eslint:recommended', 'plugin:@typescript-eslint/recommended'],
   overrides: [],
+  parser: '@typescript-eslint/parser',
   parserOptions: {
     ecmaVersion: 'latest',
     sourceType: 'module',
-    project: 'tsconfig.json',
   },
+  plugins: ['@typescript-eslint'],
   rules: {
     'no-unused-vars': 0,
+    '@typescript-eslint/no-explicit-any': ['off'],
+    '@typescript-eslint/no-inferrable-types': 'off',
+    '@typescript-eslint/no-var-requires': 0,
   },
 }
 
